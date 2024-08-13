@@ -1,0 +1,40 @@
+package switchcase;
+import java.util.*;
+public class switchcase4 {
+    public static void main(String[]args)
+    {
+         System.out.println("menu");
+          System.out.println("  ");
+           System.out.println("add");
+            System.out.println("sub");
+             System.out.println("division");
+              System.out.println("multi");
+             
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter two numbers:");
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        sc.nextLine();
+        System.out.println("enter the options");
+        String option=sc.nextLine();
+        switch (option)
+                {
+            case "add": System.out.println("additon: "+(a+b));
+            break;
+             case "sub": System.out.println("subtraction: "+(a-b));
+            break;
+             case "multi": System.out.println("multiplication: "+(a*b));
+            break;
+             case "division": System.out.println("division: "+(a/b));
+            break;
+             default:System.out.println("error");
+             break;
+                    
+            
+                }
+        
+        
+        
+    }
+    
+}
