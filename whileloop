@@ -1,0 +1,27 @@
+package whileloop;
+
+import java.util.*;
+public class Whileloop {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner (System.in);
+        System.out.println("enter a number to seperate each digits");
+        int n=sc.nextInt();
+        
+        int r;
+        int c=0;
+        
+        while(n>0)
+        {
+            r=n%10;
+            n=n/10;
+            c++;
+              System.out.println(r);
+            
+        }
+        System.out.println(c);
+      
+ 
+    }
+    
+}
