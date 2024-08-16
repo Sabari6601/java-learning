@@ -1,0 +1,24 @@
+
+package gpinloop;
+import java.util.*;
+public class GPINLOOP {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner (System.in);
+         System.out.println("enter the starting number:");
+        int a=sc.nextInt();
+        System.out.println("enter the multiplication number:");
+        int r=sc.nextInt();
+          System.out.println("enter the ending number:");
+        int n=sc.nextInt();
+        int f=a;
+       
+        for(int i=1;i<=n;i++)
+        {
+            f=f*r;
+            System.out.print(f+",");
+            
+        }
+    }
+    
+}
