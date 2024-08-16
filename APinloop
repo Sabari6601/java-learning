@@ -1,0 +1,24 @@
+
+package apinloop;
+import java.util.*;
+public class APinloop {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner (System.in);
+        System.out.println("please enter starting number");
+        int a=sc.nextInt();
+         System.out.println("please enter difference");
+        int d=sc.nextInt();
+         System.out.println("please enter total execution");
+        int n=sc.nextInt();
+        int f=a;
+        
+for(int i=0;i<n;i++)
+{
+    f=f+d;  
+    System.out.print(f+",");
+}
+
+    }
+    
+}
