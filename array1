@@ -1,0 +1,15 @@
+
+package array1b;
+
+public class Array1b {
+
+    public static void main(String[] args) {
+     int b[]= {2,3,4,5};
+     b [3]=50;
+     for (int i=0;i<b.length;i++)
+     {
+         System.out.println(b[i]);
+     }
+    }
+    
+}
