@@ -1,0 +1,16 @@
+public class Array1c {
+
+    public static void main(String[] args) {
+        int a[]= new int[5];
+            a[0]=24;
+            a[3]=11;
+            a[1]=10;
+            a[2]=20;
+        for (int x:a)
+        { 
+           
+            
+            System.out.println(x);
+        }
+    }
+    
