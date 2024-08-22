@@ -1,0 +1,20 @@
+package array2b;
+import java.util.*;
+public class Array2b {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner (System.in);
+        System.out.println("what key u need to search:");
+        int key =sc.nextInt();
+    int a[]={10,20,30,40,50,60,70,80,90,100};
+   for (int i =0;i <a.length;i++)
+   {
+       if(a[i]==key)
+       {
+           System.out.println("yes... there is the key in this array  at :"+i +"th index");
+           System.exit(0);
+       }
+   }
+   System.out.println("not found");
+    }
+    
+}
