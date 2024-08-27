@@ -1,0 +1,30 @@
+package sortingatringinarray;
+
+
+public class Sortingatringinarray {
+
+
+    public static void main(String[] args) {
+     int a[]={9,3,6,1,5,7,8,4,9,4};
+     char b[]={'s','a','b','a','r','i'};
+     String c[]={"sabari","sanjay","saran","kritika"};
+     java.util.Arrays.sort(a);
+     java.util.Arrays.sort(b);
+     java.util.Arrays.sort(c);
+     for (int x:a)
+     {
+         System.out.print(x+",");
+     }
+     System.out.println("");
+     for (char x:b)
+     {
+         System.out.print(x+",");
+     }
+     System.out.println("");
+     for (String x:c)
+     {
+         System.out.print(x+",");
+     }
+    }
+    
+}
