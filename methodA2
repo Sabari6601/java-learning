@@ -1,0 +1,27 @@
+package method1a;
+
+public class Method1a {
+            static int method(int a,int b,int z[])
+            {
+
+           
+           b=3;
+           z[1]=3;
+                 System.out.println(a+"+"+b+"+"+z[1]);
+               return a+b+z[1];
+           
+              
+            }
+    public static void main(String[] args) {
+        int f=1;
+        int g=20;
+        int c[]={10,20,30,40,50};
+        int result= method(f,g,c);
+        
+        System.out.println("the sum is :"+result+ " = thala for a reason");
+        
+        
+
+    }
+    
+}
