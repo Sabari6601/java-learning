@@ -1,0 +1,25 @@
+package methodoverloading1;
+
+public class Methodoverloading1 {
+static int sabari(int s,int g)
+{
+int x=s-g;
+return x;
+    
+}
+static float sabari(float q,float p)
+{
+    float i=q+p+10;
+    return i;
+}
+    public static void main(String[] args) {
+        int a=12;
+        int b=13;
+        float c= 12.20f;
+        float d =23.46f;
+        System.out.println(sabari(a,b));
+        System.out.println(sabari(d,c));
+     
+    }
+    
+}
