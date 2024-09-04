@@ -1,0 +1,29 @@
+package overloadingmethod2;
+import java.util.*;
+public class Overloadingmethod2 {
+static int area(int a, int b)
+{
+   int  s=a*b; 
+   return s;
+}
+static double area(double r)
+{
+   double  a =Math.PI*r*r; 
+   return a;
+}
+    public static void main(String[] args) {
+     Scanner sc=new Scanner (System.in);
+     {
+     System.out.println("enter the length and breath to find area of triangle");
+     int length=sc.nextInt();
+     int breath=sc.nextInt();
+         System.out.println(area(length,breath)+" :is the area of rectangle");
+     }
+     {
+          System.out.println("enter the radius to find area of circle");
+          double radius=sc.nextInt();
+      System.out.println(area((double)radius)+" :is the area of circle");
+    }
+    }
+    
+}
