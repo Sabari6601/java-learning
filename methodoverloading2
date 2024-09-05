@@ -1,0 +1,39 @@
+
+package overloadingmethod4;
+import java.util.*;
+public class Overloadingmethod4 {
+   static  boolean check(String f)
+   {
+       return f.matches("[a-z/A-z//]+");
+   }
+   
+   static boolean check(int d)
+   {
+   return d>=3 && d<=50;
+       
+   }
+   static boolean check(int y,int g)
+   {
+return y == 10;
+   }
+    
+    public static void main(String[] args) {
+        Scanner sc=new Scanner (System.in);
+        System.out.println("enter the name");
+        String k = sc.nextLine();
+        System.out.println("enter the age");
+        int r=sc.nextInt();
+        sc.nextLine();
+          System.out.println("enter the mobile number");
+        String i=sc.nextLine();
+        int h=i.length();
+        int s=5;
+        System.out.println("is the name valid: "+check(k));
+        System.out.println("is the age valid: "+check(r));
+            System.out.println("is the number valid: "+check(h,s));
+        
+        
+      
+    }
+    
+}
