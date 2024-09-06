@@ -1,0 +1,60 @@
+package variableargument2;
+
+public class Variableargument2 {
+static int max(int ...a)
+{
+    if(a.length==0) return Integer.MIN_VALUE;
+    int s=a[0];
+    for(int i=0;i<a.length;i++)
+        if(a[i]>s)s=a[i];
+       return s; 
+}   
+
+static int sum(int ...h)
+{
+    int k=h[0];
+    for (int i=1;i<h.length;i++)
+        k=k+h[i];
+    return k;
+}
+
+static int discount(int ...o)
+{
+    int k=o[0];
+    for (int i=1;i<o.length;i++)
+        k+=o[i];
+    int i=0;
+    if(k<=500)
+    {
+        System.out.println("you are eligible for 10% discount");
+        i=k/100*10;
+    k=k-i;
+    }
+    else if(k>500 && k<=1000)
+    {
+        System.out.println("you are eligible for 15% discount");
+        i=k/100*15;
+        k=k-i;
+    }
+      else if(k>1000 && k<=5000)
+    {
+        System.out.println("you are eligible for 20% discount");
+        i=k/100*20;
+         
+        k=k-i;
+    }
+    return k;
+}
+
+    public static void main(String[] args) {
+        {
+ int d[]={500,400,200,100,300,600};
+ System.out.println("the highest rate of product is : "+max(d));
+ System.out.println("the total value is : "+sum(d));
+ 
+   System.out.println("the value after discount is: "+discount(d) );        
+            
+        }
+    }
+    
+}
