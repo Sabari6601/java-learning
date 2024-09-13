@@ -1,0 +1,35 @@
+package class1;
+
+class Circle
+{
+    public double radius;
+    public double area()
+    {
+        return Math.PI*radius*radius;
+    }
+        public double peremeter()
+    {
+        return 2*Math.PI*radius;
+    }
+            public double circumferance()
+    {
+        return 2*Math.PI*radius;
+    }
+            public int size=20;
+            
+}
+public class Class1 {
+    public static void main(String[] args) {
+        
+        Circle one =new Circle();
+        Circle two=new Circle();
+        
+      one.radius=10;
+      
+     System.out.println("the area is :"+one.area());
+          System.out.println("the area is :"+one.peremeter());
+               System.out.println("the area is :"+one.circumferance());
+               System.out.println(two.size);
+    }
+    
+}
