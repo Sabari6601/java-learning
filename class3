@@ -1,0 +1,79 @@
+package class3;
+
+class cylinder
+{
+    public int height;
+    public double radius;
+    
+    public double area()
+    {
+     return Math.PI*radius*radius;   
+    }
+    public double totalsurface()
+    {
+        return 2*area()+circumference()+height;
+    }
+    public double circumference()
+    {
+          return  2*Math.PI*radius;   
+    }
+}
+class laptop
+{
+    public String proce;
+    public int ram;
+   public int storage;
+   public String brand;
+   
+   public String toString()
+   {
+       return "laptop details"+"\n"+
+               proce+"\n"+
+               ram+"\n"+
+               storage+"\n"+
+               brand;
+               
+   }
+}
+
+public class Class3 {
+
+   
+    public static void main(String[] args) {
+        
+        cylinder one = new cylinder();
+        cylinder two =new cylinder();
+        
+        one.height=20;
+        one.radius=5.8;
+        
+        two.radius=5.7;
+        two.height=2;
+        System.out.println("the area of cyc1: "+one.area());
+                 System.out.println("the surface of cyc1: "+one.totalsurface());       
+                        System.out.println("the circumferance of cyc1: "+one.circumference());
+
+         System.out.println("the area of cyc2: "+two.area());
+                 System.out.println("the surface of cyc2: "+two.totalsurface());       
+                        System.out.println("the circumferance of cyc2: "+two.circumference());
+
+                        
+                        laptop mine=new laptop();
+                        laptop urs=new laptop();
+                        
+                        mine.proce = "i5";
+                        mine.ram=6;
+                        mine.storage=516;
+                        mine.brand="hp";
+                        
+                           urs.proce = "i6";
+                       urs.ram=8;
+                        urs.storage=516;
+                        urs.brand="lenova";
+                        
+                        
+        System.out.println(mine);     
+          System.out.println(urs);
+    }
+    
+}
