@@ -1,0 +1,41 @@
+package class2;
+
+ class rectangle
+{
+    public int length;
+    public int breath;
+    
+    public int area()
+    {
+        return length*breath;
+        
+    }
+    public int peremeter()
+    {
+        return 2*(length+breath);
+    }
+}
+
+public class Class2 {
+
+    
+    public static void main(String[] args) {
+        rectangle one=new rectangle();
+        rectangle two=new rectangle();
+        one.length=10;
+        one.breath=8;
+        
+        
+        two.length=5;
+        two.breath=5;
+        
+        System.out.println("the area of rec1: "+one.area());
+             System.out.println("the peremeter of rec1: "+one.peremeter());
+        
+          System.out.println("the area of rec2: "+two.area());
+             System.out.println("the peremeter of rec2: "+two.peremeter());
+        
+
+    }
+    
+}
