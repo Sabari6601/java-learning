@@ -1,0 +1,74 @@
+
+package datahiding;
+class mobile
+{
+    private int price;
+    private int ram;
+    private int storage;
+    
+    public int getprice()
+    {
+        return price;
+    }
+    public int getram()
+    {
+        return ram;
+    }
+    public int getstorage()
+    {
+        return storage;
+    }
+    public void setprice(int p)
+    {
+        if(p>=0)
+        {
+            price=p;
+        }
+        
+    }
+     public void setram(int r)
+    {
+         ram =r;
+    }
+      public void setstorage(int s)
+    {
+         storage =s;
+    }
+    
+    public String spec()
+    {
+        return price+"\n"+ram+"\n"+storage;
+    }
+    public String prange()
+    {
+        if(price >=10000)
+        {
+            return "medium range";
+        }
+        else
+        {
+            return "budget friendly";
+        }
+    }
+    
+}
+
+public class Datahiding {
+
+  
+    public static void main(String[] args) {
+        
+        mobile mi=new mobile();
+        
+        mi.setprice(8500);
+        mi.setram(6);
+        mi.setstorage(128);
+        System.out.println(mi.spec());
+           System.out.println(mi.prange());
+              System.out.println();
+        
+        
+
+    }
+    
+}
