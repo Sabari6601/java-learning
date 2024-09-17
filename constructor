@@ -1,0 +1,71 @@
+
+package constructor;
+class mobile
+{
+    private int price;
+    private int ram;
+    private int storage;
+    
+    
+   public mobile()
+   {
+       price =35000;
+       ram=6;
+       storage=128;
+         }
+public mobile(int p,int r,int s)
+{
+    price =p;
+    ram=r;
+    storage=s;
+}
+   public int getprice()
+    {
+        return price;
+    }
+    public int getram()
+    {
+        return ram;
+    }
+    public int getstorage()
+    {
+        return storage;
+    }
+    
+
+public String spec()
+{
+    return price+"\n"+ram+"\n"+storage;
+}
+public String prange()
+{
+    if(price<=10000)
+    {
+        return "mediumrange";
+    }
+    else
+    {
+        return "budgerfriendle";
+    }
+    
+    
+}
+
+
+}
+public class Constructor {
+
+    public static void main(String[] args) {
+        mobile apple=new mobile(50000,6,128);
+        mobile samsung=new mobile();
+        
+         System.out.println(apple.spec());  
+         System.out.println(apple.prange());
+         System.out.println("   ");
+      
+         System.out.println(samsung.prange());
+   
+   
+    }
+    
+}
