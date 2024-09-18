@@ -1,0 +1,65 @@
+package constructer2;
+class shop
+{
+    private String itemno;
+    private String name;
+    private int price;
+    private int qty;
+    
+    public String getitemno()
+    {
+        return itemno;
+    }
+      public String getname()
+    {
+        return name;
+    }
+        public int getprice()
+    {
+        return price;
+    }
+          public int getqty()
+    {
+        return qty;
+    }
+          
+          public void setprice(int p)
+          {
+              price=p;
+          }
+          public void setqty(int q)
+          {
+              qty=q;
+          }
+          public shop(String d,String k)
+          {
+              itemno=d;
+              name=k;
+          }
+           public shop()
+          {
+              itemno="2345ghj6";
+              name="rcplain";
+          }
+          public String details()
+          {
+              return itemno+"\n"+name+"\n"+price+"\n"+qty;
+          }
+}
+public class Constructer2 {
+
+
+    public static void main(String[] args) {
+     shop one=new shop("12fgh","rccar");
+     shop two=new shop();
+     one.setprice(1000);
+     one.setqty(20);
+        two.setprice(456);
+     two.setqty(245);
+     
+     System.out.println(one.details());
+          System.out.println(" ");
+          System.out.println(two.details());
+    }
+    
+}
