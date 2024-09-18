@@ -1,0 +1,65 @@
+
+package constructer4;
+
+class subject
+{
+    private String subid;
+    private String name;
+    private String maxmark;
+    private String markobtained;
+
+    public String getid()
+    {
+        return subid;
+    }
+       public String getname()
+    {
+        return name;
+    }
+          public String getmaxmark()
+    {
+        return maxmark;
+    }
+             public String getmarkgetten()
+    {
+        return markobtained;
+    }
+             public void setmarkgetten(String m)
+             {
+                 markobtained=m;
+             }
+    public subject(String id,String na,String maxma)
+    {
+        subid=id;
+     name=na;
+     maxmark=maxma;
+    }
+   
+    public String toString()
+    {
+        return subid+" \n"+name+"\n "+maxmark+" \n"+markobtained;
+    }
+    
+    
+}
+public class Constructer4 {
+
+
+    public static void main(String[] args) {
+        
+        subject subs[]=new subject[3];
+     subs[0]=new subject("22bit09","python","100");
+       subs[1]=new subject("22bit08","react","100");
+         subs[2]=new subject("22bit07","rdbms","100");
+         subs[0].setmarkgetten("34");
+            subs[1].setmarkgetten("56");
+               subs[2].setmarkgetten("88");
+        System.out.println(subs[0].toString()); System.out.println();
+         System.out.println(subs[1].toString()); System.out.println();
+          System.out.println(subs[2].toString());
+       
+        
+     
+    }
+    
+}

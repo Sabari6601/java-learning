@@ -1,0 +1,61 @@
+
+package constructer5;
+class student
+{
+    private String id;
+    private String name;
+    private String dept;
+    private String subject;
+    
+    public String getid()
+    {
+        return id;
+    }
+     public String getname()
+    {
+        return name;
+    }
+     public String getdept()
+    {
+        return dept;
+    }
+      public String getsubject()
+    {
+        return subject;
+    }
+      public void setsubs(String a)
+      {
+          subject= a;
+      }
+public student(String i,String n,String d)
+        {
+    id=i;
+    name=n;
+    dept=d;
+}
+public String toString()
+{
+    return id+" "+name+" "+dept+" "+subject;
+}
+
+
+}
+
+public class Constructer5 {
+
+   
+    public static void main(String[] args) {
+       student number[]=new student[3];
+     
+       number[0]=new student("it1","sabari","it");
+        number[1]=new student("baf128","Kritika","baf");
+         number[2]=new student("cs3","saran","cs");
+         number[0].setsubs("maths");
+            number[1].setsubs("accounts");
+               number[2].setsubs("science");
+         for(student s:number)
+         
+         System.out.println(s);
+         }
+    
+}
