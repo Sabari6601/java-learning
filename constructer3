@@ -1,0 +1,67 @@
+package constructer3;
+class customer
+        {
+    private String cusid;
+    private String cusname;
+    private String cusaddress;
+    private String phoneno;
+    
+    public String getid()
+    {
+        return cusid;
+    }  
+      public String getname()
+    {
+        return cusname;
+    }  
+        public String getaddress()
+    {
+        return cusaddress;
+    }  
+          public String getphoneno()
+    {
+        return phoneno;
+    }  
+    public void setaddress(String a)
+    {
+        cusaddress=a;
+    }
+    public void setnumber(String n)
+    {
+        phoneno=n;
+    }
+    public customer()
+    {
+        cusid="23fg4";
+        cusname="sabari";
+    }
+    public customer(String id,String na)
+    {
+        cusid=id;
+        cusname=na;
+    }
+    public String details()
+    {
+      return cusid+" \n"+cusname+"\n "+cusaddress+"\n "+phoneno;      
+    }
+}
+
+public class Constructer3 {
+
+    public static void main(String[] args) {
+        customer one =new customer();
+        customer two=new customer( "sa204 "," kritika");
+        two.setaddress("madukarai market");
+         two.setnumber("23456789567");
+        one.setaddress("coimbatore");
+        one.setnumber("+919361578494");
+        System.out.println(one.details());
+        System.out.println();
+        System.out.println(two.details());
+        
+        
+        
+        
+        
+  
+    }
