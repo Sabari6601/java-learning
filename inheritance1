@@ -1,0 +1,52 @@
+package iheritance1;
+class iphone14
+{
+    public String brand;
+    public int storage;
+    public int price;
+    public String weight;
+    
+    public iphone14()
+    {
+        brand="apple";
+        storage=128;
+        price=69999;
+        weight="206gram";
+    }
+    
+    public String spec()
+    {
+        return brand+" "+storage+" "+price+" "+weight;
+    }
+}
+
+class iphone15 extends iphone14
+{
+    public String size;
+    
+    public iphone15()
+    {
+        super();
+        size="6.6 inch";
+    }
+      public String spec()
+    {
+        return super.spec()+size;
+    }
+    
+    
+}
+public class Iheritance1 {
+
+    public static void main(String[] args) {
+        iphone14 old=new iphone14();
+        System.out.println(old.spec());
+        iphone15 latest=new iphone15();
+        latest.weight="200gram";
+        System.out.println(latest.spec());
+                
+        
+        
+    }
+    
+}
