@@ -1,0 +1,90 @@
+package inheritance2;
+class account
+{
+    private String name;
+    private String accno;
+    private String address;
+    private String dob;
+    private String phoneno;
+    protected long balance;
+    
+    
+    public account(String n,String an,String adr,String d,String pno,long bal)
+    {
+        name=n;
+        accno=an;
+        address=adr;
+        dob=d;
+        phoneno=pno;
+        balance=bal;
+    }
+    
+    public String getname(){return name;}        
+    public String getaccno(){return accno;}        
+    public String getaddress(){return address;}        
+    public String getdob(){return dob;}        
+    public String getphonono(){return phoneno;}        
+    public long getbalance() {return balance;}
+    
+    public void setaddress(String a){address=a;}
+    public void setphonono(String pn){phoneno=pn;}
+      public void setbalance(long b){balance=b;}
+
+      public String details()
+      {
+          return name+" "+accno+" "+address+" "+dob+" "+phoneno+" "+balance;      }
+      
+}
+
+class savingacc extends account
+{
+      public savingacc(String n,String an,String adr,String d,String pno,long bal)
+      {
+         super(n,an,adr,d,pno,bal); 
+      }
+    public void credit(long camt)
+    {
+        balance += camt;
+    }
+     public void debit(long damt)
+    {
+        balance -= damt;
+    }
+}
+class emi extends savingacc
+{
+   public emi(String n,String an,String adr,String d,String pno,long bal)
+      {
+         super(n,an,adr,d,pno,bal); 
+      }
+   
+   public void payemi(long eamt)
+   {
+       balance -=eamt;
+   }
+   public void newloan(long lamt)
+   {
+       balance +=lamt;
+   }
+}
+public class Inheritance2 {
+
+    public static void main(String[] args) {
+        savingacc cus1=new savingacc("sabari","fdrl123467883","coimbatore","20/02/2004","9361578494",35000);
+        cus1.debit(10000);
+        System.out.println(cus1.details());
+    cus1.setaddress("pollachi");
+       System.out.println(cus1.details());
+    
+          emi cus2=new emi("sabari","fdrl123467883","coimbatore","20/02/2004","9361578494",5000);
+         
+        cus2.payemi(1500);
+        cus2.newloan(1000);
+        cus2.credit(100);
+        System.out.println(cus2.details());
+    
+    
+    
+    }
+    
+}
