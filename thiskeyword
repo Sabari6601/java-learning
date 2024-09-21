@@ -1,0 +1,33 @@
+
+package thiskeyword;
+class recharge
+{
+    public String sim;
+    public long phoneno;
+ 
+    
+    public recharge(String sim,long phoneno)
+    {
+      this.  sim=sim;
+      this.  phoneno=phoneno;
+    }
+
+   
+     void details()
+    {
+        System.out.println (sim+" \n"+phoneno);
+    }
+    
+}
+
+public class Thiskeyword {
+
+    public static void main(String[] args) {
+        recharge one=new recharge("jio",9361578494l);
+ one.details();
+     
+      
+        
+    }
+    
+}
