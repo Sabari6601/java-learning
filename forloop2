@@ -1,0 +1,21 @@
+
+package forloop4;
+import java.util.*;
+public class Forloop4 {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a number to find the factorial");
+        int f=sc.nextInt();
+        int fact=1;
+        
+        for (int i=1;i<=f;i++)
+        {
+            fact = fact*i ;
+        }
+        {
+            System.out.println("factroial of"+f+"="+fact);
+        }
+    }
+    
+}
