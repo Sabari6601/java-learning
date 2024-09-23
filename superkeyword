@@ -1,0 +1,50 @@
+
+package inheritanceconstructer;
+class rectangle
+{
+    public int length;
+    public int breath;
+    public rectangle()
+    {
+        length=2;
+        breath=5;
+    }
+    public rectangle(int l,int b)
+    {
+        length=l;
+        breath=b;
+    }
+       public int area1()
+     {
+         return length*breath;
+     }
+    
+}
+class cuboid extends rectangle
+{
+    public int height;
+     public cuboid()
+             {
+                height=5; 
+             }
+     public cuboid(int l,int b,int h)
+     {
+         super(l,b);
+       height=h;
+     }
+     public int area()
+     {
+         return area1()*height;
+     }
+     
+}
+
+public class Inheritanceconstructer {
+
+
+    public static void main(String[] args) {
+cuboid one=new cuboid(2,5,10);
+System.out.println(one.area());
+    }
+    
+}
