@@ -1,0 +1,46 @@
+
+package dynamic.method.dispatch;
+class swift
+{
+    public void company()
+    {
+        System.out.println("maruthi");
+    }
+    public void price()
+    {
+        System.out.println("$10000");
+    }
+    public void milage()
+    {
+        System.out.println("16kmpl");
+    }
+}
+class i20 extends swift
+{
+    public void company()
+    {
+        System.out.println("hyundai");
+    }
+    public void price()
+    {
+        System.out.println("$15000");
+    }
+    public void feature()
+    {
+        System.out.println("sunroof");
+    }
+}
+
+public class DynamicMethodDispatch {
+
+  
+    public static void main(String[] args) {
+        swift s=new i20();
+        s.price();
+        s.milage();
+        s.company();
+     
+        
+    }
+    
+}
