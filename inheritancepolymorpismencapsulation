@@ -1,0 +1,68 @@
+
+package inher.enca.polymor;
+class yamaha
+{
+    public String model;
+    public int speed;
+    private int cc;
+ 
+public void setcc(int cc)
+{
+    this.cc=cc;
+}
+public int getcc()
+{
+    return cc;
+}
+
+public void details(String model,int speed)
+{
+    this.model=model;
+    this.speed=speed;
+}
+public void details(int speed,String model)
+{
+    this.model=model;
+    this.speed=speed;
+}
+
+public void details1()
+{
+System.out.println(model);
+}
+public void details2()
+{
+  System.out.println(speed+"km"+" "+cc+"cc");
+}
+}
+
+
+class ktm extends yamaha
+{  
+public void details1()
+{
+    
+System.out.println(model+" sportsbike");
+}
+    public void details2()
+    {
+          System.out.println(speed+"mph"+" "+getcc()+"cc");
+    }
+}    
+
+public class InherEncaPolymor {
+
+    public static void main(String[] args) {
+    yamaha one=new yamaha();
+    one.details("mt15",135);
+    one.setcc(155);
+    one.details1();
+    one.details2();
+    yamaha two=new ktm();
+    two.details(100,"ktmrc");
+    two.setcc(200);
+    two.details1();
+    two.details2();
+    }
+    
+}
