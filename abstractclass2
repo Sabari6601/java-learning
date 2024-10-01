@@ -1,0 +1,68 @@
+
+package abstractclass2;
+ abstract class shape
+{
+     public int breath;
+     public int length;
+     public int side;
+     public shape()
+     {
+          length=5;
+         breath=2;
+         side=4;
+     
+     }
+    abstract int area();
+    abstract int peremeter();
+}
+class rectangle extends shape
+{
+public rectangle()
+{
+    super();
+} 
+@Override
+    public int area()
+    {
+     return length*breath;   
+    }
+    public int peremeter()
+    {
+        return (length+breath)*2;
+    }
+ 
+}
+class square extends shape
+{
+
+    
+    public square()
+    {    super();
+    
+    }
+    
+    public int area()
+    {
+        return side*side;
+    }
+    public int peremeter()
+    {
+        return (side+side)*2;
+    }
+}
+public class Abstractclass2 {
+
+    public static void main(String[] args) {
+shape     r=new rectangle();
+        System.out.println("the area is rectangle: "+r.area());
+         System.out.println("the peremeter is rectangle: "+r.peremeter());
+      
+         
+         
+        shape s=new square();
+        System.out.println("the area is square: "+s.area());
+         System.out.println("the peremeter is square: "+s.peremeter());
+
+    }
+    
+}
