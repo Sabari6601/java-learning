@@ -1,0 +1,29 @@
+
+package interface1;
+interface parent
+{
+     void one();
+     void two();
+}
+class child implements parent
+{
+    public void one()
+    {
+        System.out.println("from child class");
+     }
+    public void two()
+    {
+        System.out.println("from child class");
+    }
+
+}
+
+public class Interface1 {
+
+    public static void main(String[] args) {
+   parent t=new child();
+   t.one();
+   t.two();
+    }
+    
+}

@@ -1,0 +1,85 @@
+
+package interface2;
+class phone
+{
+   public void call()
+    {
+        System.out.println("calling");
+    }
+   public void sms()
+   {
+       System.out.println("sending sms");
+   }
+}
+interface camera
+{
+      void photo();
+    void video();    
+}
+interface musicplayer
+{
+    void play();
+    void pause();
+    void download();
+}
+class smartphone extends phone implements camera,musicplayer
+{
+    public void sms()
+    {
+        System.out.println("sms is sending");
+    }
+    public void photo()
+    {
+        System.out.println("taking photo");
+    }
+    @Override
+    public void video()
+    {
+        System.out.println("taking video");
+    }
+    public void play()
+    {
+        System.out.println("playing music");
+    }
+    public void pause()
+    {
+        System.out.println("the music is paused");
+    }
+    public void download()
+    {
+        System.out.println("the music is downloaded");
+    }
+            
+}
+public class Interface2 {
+
+    public static void main(String[] args) {
+        phone p=new phone();
+        p.call();
+        p.sms();
+        
+           System.out.println(" ");
+        smartphone s=new smartphone();
+        s.call();
+        s.sms();
+        s.video();
+        s.photo();
+        s.play();
+        s.pause();
+        s.download();
+        
+           System.out.println(" ");
+        camera c=new smartphone();
+        c.photo();
+        c.video();
+        
+        System.out.println(" ");
+        musicplayer m=new smartphone();
+        m.play();
+        m.pause();
+        m.play();
+        
+        
+    }
+    
+}
