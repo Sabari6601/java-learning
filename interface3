@@ -1,0 +1,50 @@
+
+package interface3;
+interface member
+{
+    void callback();
+}
+class store
+{
+    member mem[]=new member[3];
+    int count=0;
+    
+    void register(member m)
+    {
+     mem [count++]=m;   
+    }
+    void invite()
+    {
+        for(int i=0;i<count;i++)
+        {
+            mem[i].callback();
+        }
+    }
+}
+class customer implements member
+{
+    public String name;
+    public customer(String n)
+     {
+         this.name=n;
+     }
+    public void callback()
+      {
+          System.out.println("ok i will come by :"+name);
+      }
+    
+}
+public class Interface3 {
+
+    public static void main(String[] args) {
+        store s=new store();
+        customer c1=new customer("sabari");
+        customer c2=new customer("kritika");
+        customer c3=new customer("sakr");
+        s.register(c1);
+        s.register(c2);
+        s.register(c3);
+         s.invite();
+    }
+    
+}
