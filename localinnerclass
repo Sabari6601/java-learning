@@ -1,0 +1,32 @@
+
+package localinnerclass;
+class one
+{
+    void display()
+    {
+        class two
+        {
+            int a=10;
+            int b=20;
+            public int disp()
+            {
+          System.out.println("it is created inside the outer class method with the help of inner class:");
+         return a+b;
+            } 
+        }
+        two t=new two();
+      System.out.println(t.disp());
+    }     
+}
+
+public class Localinnerclass {
+
+  
+    public static void main(String[] args) {
+        one o=new one();
+        o.display(); 
+ 
+   
+    }
+    
+}
