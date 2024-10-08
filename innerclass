@@ -1,0 +1,46 @@
+
+package innerclass1;
+class one
+{
+    int a=20;
+    int b=30;
+    
+    two w=new two();
+    
+    public  int add()
+    {
+        return a+b;
+    }
+ class two
+ {
+     int c=40;
+    public int subtract()
+    {
+        return c-b-a;
+    }
+ } 
+    public int f()
+    {
+          System.out.println(w.c);  
+     return   add();
+       
+    }    
+         }
+
+public class Innerclass1 {
+
+ 
+    public static void main(String[] args) {
+        one o=new one();
+        
+        System.out.println(o.f());
+      
+       one.two t=new one().new two();
+        System.out.println(t.subtract());
+        
+       
+        
+  
+    }
+    
+}
