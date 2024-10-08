@@ -1,0 +1,33 @@
+
+package anonymousinnerclass;
+abstract class one
+        {
+  abstract  void display();
+}
+
+class two
+{
+    public void meth()
+    {
+        one o=new one()
+        {
+            @Override
+            void display()
+            {
+                System.out.println("hello");
+            }
+        };
+      o.display(); 
+    }
+}
+
+public class Anonymousinnerclass {
+
+    
+    public static void main(String[] args) {
+        two t=new two();
+        t.meth();
+        
+    }
+    
+}
