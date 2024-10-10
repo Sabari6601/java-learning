@@ -1,0 +1,33 @@
+
+package staticblock;
+class one
+{
+    static int a;
+    
+    static
+    {
+        
+        System.out.println("from block 1:"+a);
+        a=10;
+    }
+    static 
+    {
+        a=20;
+        System.out.println("from block 2:"+a);
+        
+    }
+}
+public class Staticblock {
+
+    public static void main(String[] args) {
+    one o=new one();
+    System.out.println(one.a);
+    o.a=40;
+    
+    one oo=new one();
+    System.out.println(oo.a);
+     
+      
+    }
+    
+}
