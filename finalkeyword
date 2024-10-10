@@ -1,0 +1,42 @@
+
+package finalkeyword;
+  class one
+{
+    final int AGE = 19;
+  static  final int HEIGHT;
+    final int WEIGHT;
+    
+    static
+    {
+        HEIGHT=175;  
+    }
+    
+    one(int a)
+    {
+       this. WEIGHT=a;
+    }
+    
+    
+    final  void meth1()
+    {
+        System.out.println(AGE+", "+WEIGHT+" ,"+HEIGHT);
+    }
+}
+class two extends one
+{
+    two(int a)
+    {
+        super(a);
+    }
+
+}
+public class Finalkeyword {
+
+
+    public static void main(String[] args) {
+        two t=new two(61);
+        t.meth1();
+        
+    }
+    
+}
