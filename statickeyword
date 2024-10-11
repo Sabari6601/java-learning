@@ -1,0 +1,57 @@
+
+package statickeyword;
+import java.util.*;
+class student
+{
+ private  String rollno;
+ private static int count=1;
+
+ private String createrollno()
+ {
+     Date d=new Date();
+     String rn="SKASC_"+(d.getYear()+1900)+"_"+"BIT_"+count;
+     count++;
+     return rn;  
+ }
+ 
+ public student()
+         {
+             rollno=createrollno();
+         }
+ public String getrollno()
+ {
+     return rollno;
+ } 
+}
+
+public class Statickeyword {
+
+
+    public static void main(String[] args) {
+        student s1=new student();
+            student s2=new student();
+                student s3=new student();
+            
+     System.out.println(s1.getrollno()); 
+     System.out.println(s2.getrollno()); 
+     System.out.println(s3.getrollno());
+  if(s1.getrollno().equals("SKASC_2024_BIT_1"))
+  {
+      System.out.println("yess baby");
+  }
+  else
+  {
+      System.out.println("no baby");
+  }
+    if(s2.getrollno().equals("SKASC_2024_BIT_1"))
+  {
+      System.out.println("yess baby");
+  }
+  else
+  {
+      System.out.println("no baby");
+  }
+     
+    }
+    
+}
