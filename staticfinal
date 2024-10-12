@@ -1,0 +1,67 @@
+
+package pkgstatic.and.pkgfinal;
+class one
+{
+    static int a=1;
+    static int b;
+    static int c;
+    
+    final int aa=11;
+    final int bb;
+    final int cc;
+    
+    static final int aaa=111;
+    static final int bbb;
+    
+    static
+    {
+        b=2;
+    }
+    
+    static void meth1()
+    {
+        c=3;
+    }
+    
+    {
+        bb=22;
+      
+    }
+    
+    one(int cc)
+    {
+        this.cc=cc;
+    }
+    
+    static{
+       bbb=222;
+    }
+   
+    
+    
+}
+
+public class StaticAndFinal {
+
+   
+    public static void main(String[] args) {
+        one o=new one(33);
+        one.meth1();
+        System.out.println(one.a+" "+one.b+" "+one.c);
+        one.a=10;
+        o.b=20;
+        one.c=30;
+         System.out.println(o.a+" "+o.b+" "+o.c);
+         
+         one oo=new one(33);
+            System.out.println(oo.a+" "+oo.b+" "+oo.c);
+            oo.a=100;
+               System.out.println(oo.a+" "+oo.b+" "+oo.c);
+            
+ one ooo=new one(33);   
+          System.out.println(ooo.aa+" "+ooo.bb+" "+ooo.cc);
+     
+        System.out.println(ooo.aaa+" "+one.bbb);    
+    }
+    
+}
