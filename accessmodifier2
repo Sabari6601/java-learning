@@ -1,0 +1,97 @@
+
+package accessmod;
+
+ class five {
+String a="default";
+public String b="public";
+private String c="private";
+protected String d="protected";
+    void meth1()
+    {
+        System.out.println("it is an default method:"+a+","+b+","+c+","+d);
+    }
+     public void meth2()
+    {
+        System.out.println("it is an public method:"+a+","+b+","+c+","+d);  
+    }
+     private void meth3()
+     {
+           System.out.println("it is an private method:"+a+","+b+","+c+","+d);
+     }
+     protected void meth4()
+     {
+           System.out.println("it is an protected method:"+a+","+b+","+c+","+d);
+     }
+       
+}
+public class Accessmod extends five
+{  
+
+     protected void meth5()
+{
+    System.out.println(a);
+    System.out.println(b);
+    System.out.println(d);
+  
+    meth1();
+    meth2();
+    meth4();
+}
+     @Override
+     void meth1()
+     {
+           System.out.println("it is an overrided default method:");
+     }
+       protected void meth4()
+     {
+           System.out.println("it is an overrided protected method");
+     }
+}
+
+class six
+{
+    public static void main(String args[])
+    {
+        Accessmod f=new Accessmod();
+        System.out.println(f.a);
+        System.out.println(f.b);
+        System.out.println(f.d);
+        f.meth1();
+        f.meth2();
+      f.meth5();
+    }
+}
+
+---------------------------------------------------------------------------------------
+                                ACCESSMODIFIER
+
+                                package accessmod1;
+                                import accessmod.Accessmod;
+                                
+                                class one extends Accessmod
+                                {
+                                    protected void meth6()
+                                    {
+                                        System.out.println(b);
+                                        System.out.println(d);
+                                        meth2();
+                                        meth4();
+                                       meth5();
+                                   }
+                                }
+                                
+                                public class newclass {
+                                    
+                                    public static void main (String args[])
+                                    {
+                                        one o=new one();
+                                          System.out.println(o.b);        
+                                          o.meth2();
+                                          o.meth6();
+                                       
+                                        
+                                    }
+                                           
+                                    
+                                }
+                                
