@@ -1,0 +1,87 @@
+
+package accessmod;
+
+ class five {
+int a=10;
+public int b=20;
+private int c=30;
+protected int d=40;
+    void meth1()
+    {
+        System.out.println(a+","+b+","+c+","+d);
+    }
+     public void meth2()
+    {
+        System.out.println(a+","+b+","+c+","+d);  
+    }
+     private void meth3()
+     {
+           System.out.println(a+","+b+","+c+","+d);
+     }
+     protected void meth4()
+     {
+           System.out.println(a+","+b+","+c+","+d);
+     }
+       
+}
+public class Accessmod extends five
+{
+public void meth5()
+{
+    System.out.println(a);
+    System.out.println(b);
+    System.out.println(d);
+  
+    meth1();
+    meth2();
+    meth4();
+}
+}
+class six
+{
+    public static void main(String args[])
+    {
+        Accessmod f=new Accessmod();
+        System.out.println(f.a);
+        System.out.println(f.b);
+        System.out.println(f.d);
+        f.meth1();
+        f.meth2();
+        f.meth5();
+    }
+}
+
+
+------------------------------------------------------------------------------------------
+                              NEXT package
+
+                              package accessmod1;
+                              import accessmod.Accessmod;
+                              
+                              class one extends Accessmod
+                              {
+                                  protected void meth6()
+                                  {
+                                      System.out.println(b);
+                                      System.out.println(d);
+                                      meth2();
+                                      meth4();
+                                     meth5();
+                                 }
+                              }
+                              
+                              public class newclass {
+                                  
+                                  public static void main (String args[])
+                                  {
+                                      one o=new one();
+                                        System.out.println(o.b);
+                                        o.meth2();
+                                        o.meth6();
+                                     
+                                      
+                                  }
+                                         
+                                  
+                              }
+                              
