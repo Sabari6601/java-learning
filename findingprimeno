@@ -1,0 +1,25 @@
+
+package primeno;
+
+public class Primeno {
+
+    public static void main(String[] args) {
+     for (int i=2;i<=20;i++)
+     {
+         boolean primeno=true;
+          
+             for(int j=2;j<=Math.sqrt(i);j++)
+             {
+                 if(i%j==0)
+                 {
+                     primeno=false;
+                  break;
+                 }
+             }
+         if(primeno == true)
+         {
+             System.out.print(i+",");
+         }
+     }
+    }
+}
