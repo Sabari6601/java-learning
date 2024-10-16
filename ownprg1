@@ -1,0 +1,126 @@
+
+package owmprg1;
+import java.util.*;
+class bike{
+    Scanner sc=new Scanner (System.in);
+int price;
+  
+   bike()
+   {
+           System.out.println("Enter the price for the bike");
+           int price=sc.nextInt();
+   
+       if(price>250000)
+       {
+           System.out.println("u can go for the bike above 250cc");
+       }
+       else if(price>150000)
+               {
+                              System.out.println("u can go for the bike above 150cc");
+
+               }
+       else if(price>100000)
+       {
+                      System.out.println("u can go for the bike above 100cc");
+
+       }
+       else
+       {
+                      System.out.println("u can go for work");
+
+       }
+   }
+    bike(int p)
+   {
+      
+            this.price=p;
+   
+       if(price>250000)
+       {
+           System.out.println("u can go for the bike above 250cc");
+       }
+       else if(price>150000)
+               {
+                              System.out.println("u can go for the bike above 150cc");
+
+               }
+       else if(price>100000)
+       {
+                      System.out.println("u can go for the bike above 100cc");
+
+       }
+       else
+       {
+                      System.out.println("u can go for work");
+
+       }
+   }
+}
+class car 
+{
+    Scanner sc=new Scanner (System.in);
+int price;
+  
+   car()
+   {
+           System.out.println("Enter the price for the car");
+           int price=sc.nextInt();
+   
+       if(price>2500000)
+       {
+           System.out.println("u can go for the suv");
+       }
+       else if(price>1500000)
+               {
+                              System.out.println("u can go for sedan");
+
+               }
+       else if(price>1000000)
+       {
+                      System.out.println("u can go for the hatchback");
+
+       }
+       else
+       {
+                      System.out.println("u can go for work");
+
+       }
+   }
+    car(int p)
+   {
+      
+            this.price=p;
+   
+       if(price>2500000)
+       {
+           System.out.println("u can go for the suv");
+       }
+       else if(price>1500000)
+               {
+                              System.out.println("u can go for sedan");
+
+               }
+       else if(price>1000000)
+       {
+                      System.out.println("u can go for the hatchback");
+
+       }
+       else
+       {
+                      System.out.println("u can go for work");
+
+       }
+   }
+}
+
+public class Owmprg1 {
+  
+    public static void main(String[] args) {
+        bike o=new bike(200000);
+        
+        car c=new car();
+        
+   
+    }
+    
+}
