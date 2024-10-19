@@ -1,0 +1,32 @@
+
+package exceptionhandling1;
+
+public class Exceptionhandling1 {
+
+  
+    public static void main(String[] args) {
+        int a[]={10,0,20,30,40,50};
+        int b;
+        int c;
+              try
+              {
+                  b=a[0]/a[3];
+                  System.out.println(b);  
+                     c=a[10];
+                        System.out.println(c);
+              }
+              catch(ArithmeticException e)
+              {
+                  System.out.println(e);
+              }
+            
+              catch(ArrayIndexOutOfBoundsException e)
+              {
+                  System.out.println(e);
+              }
+
+
+
+    }
+    
+}
