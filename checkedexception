@@ -1,0 +1,50 @@
+
+package checkedexception;
+class lowbalance extends Exception
+{
+   public String toString()
+    {
+        return"balance is low";
+    }
+}
+public class Checkedexception {
+    static void meth1()
+    {
+        try
+        {
+            throw new lowbalance();
+        }
+        catch(lowbalance e)
+        {
+            System.out.println(e);
+        }
+    }
+    static void meth2()
+    {
+        meth1();
+    }
+    static void meth3()
+    {
+        meth2();
+    }
+    static void meth4()
+    {
+     try
+    {
+        int a[]={1,2,3,4,5};
+    System.out.println(a[1]);
+    System.out.println(10/0);
+      }
+catch(Exception e)
+{
+    System.out.println(e.toString());
+     }
+    }
+    public static void main(String[] args) {
+       meth3();
+       System.out.println("---------------------");
+        meth4();
+
+    }
+    
+}
