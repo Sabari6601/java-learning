@@ -1,0 +1,34 @@
+package throwandthrows2;
+class negative extends Exception
+{
+    public String toString()
+    {
+        return"no negative value";
+    }
+}
+
+public class Throwandthrows2 {
+  static int area(int length,int breath)throws negative
+{  if(length<0 || breath<0)
+  throw new negative();
+return length*breath;
+}
+static void meth1() throws negative
+{
+    System.out.println(area(5,-5));
+}
+    public static void main(String[] args) throws negative{
+      
+      try
+      {
+        area(10,5);
+        System.out.println("done");
+      }
+      catch(negative e)
+      {
+         System.out.println(e); 
+      }
+      
+
+}
+}
