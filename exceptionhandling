@@ -1,0 +1,87 @@
+
+package exceptionhandlinglast;
+import java.util.Arrays;
+class StackOverFlow extends Exception
+{
+    public String toString()
+    {
+        return "Stack is Full";
+    }
+}
+class StackUnderFlow extends Exception 
+{
+    public String toString()
+    {
+        return "Stack is Empty";
+    }
+}
+class Stack
+{
+    private int size;
+    private int top=-1;
+  private  int S[];
+    
+    public Stack(int sz)
+    {
+        size=sz;
+        S=new int[sz];
+    }
+    
+    void one()
+    {
+        System.out.println(Arrays.toString(S));
+    }
+    
+    public void push(int x) throws StackOverFlow
+    {
+        if(top==size-1)
+            throw new StackOverFlow();
+        top++;
+        S[top]=x;
+    }
+    
+    public int pop() throws StackUnderFlow
+    {
+        int x=-1;
+        
+        if(top==-1)
+            throw new StackUnderFlow();
+        x=S[top];
+        top--;
+        return x;              
+    }
+}
+
+
+public class Exceptionhandlinglast {
+
+    public static void main(String[] args)throws Exception {
+         {
+        Stack st=new Stack(5);
+        try
+        {
+      // st.push(1);
+        //st.push(2);
+       // st.push(3);
+       // st.push(4);
+        st.push(5);
+      
+       st.one();
+                   System.out.println("Popped element: " + st.pop());
+               System.out.println("Popped element: " + st.pop());
+            st.one();  
+        
+        }
+        catch(StackOverFlow s)
+        {
+            System.out.println(s);
+        }
+        catch(StackUnderFlow r)
+        {
+            System.out.println(r);
+        }
+        
+    }   
+}
+    }
+    
