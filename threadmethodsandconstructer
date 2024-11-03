@@ -1,0 +1,51 @@
+
+package threadclassandmethods;
+class mythread extends Thread
+{
+  
+    mythread(String name)
+    {
+        super(name);
+        setPriority(Thread.MAX_PRIORITY-3);
+    }
+      public void run()
+    {
+        int count =1;
+        while(true)
+        {
+            System.out.println(count++);
+            try
+            {
+                Thread.sleep(2000,10);
+            }
+            catch(InterruptedException e)
+                    {
+                        System.out.println(e);
+                    }
+        }
+    }
+}
+class one implements Runnable
+{
+    public void run()
+    {
+        System.out.println("hello");
+    }
+}
+public class Threadclassandmethods {
+
+    public static void main(String[] args) {
+        one o=new one();
+    mythread t=new mythread("from main method");
+    Thread tt=new Thread(o);
+  System.out.println("name "+t.getName());  
+  System.out.println("priority "+t.getPriority());  
+   System.out.println("state "+t.getState());  
+  System.out.println("id " +t.getId()); 
+  t.start();
+  t.interrupt();
+  tt.start();
+  
+    }
+    
+}
