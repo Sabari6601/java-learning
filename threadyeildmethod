@@ -1,0 +1,44 @@
+
+package threadsmethodsyeild;
+
+
+public class Threadsmethodsyeild extends Thread
+{
+    public void run()
+    {
+        int i=0;
+        while(true)
+        {
+            
+        
+        System.out.println(i +"method");
+    
+ i++;                  Thread.yield();   }}
+
+    public static void main(String[] args) {
+        Threadsmethodsyeild t=new Threadsmethodsyeild ();
+        t.start();
+        {
+        int j=0;
+           while(true)
+           {
+                System.out.println(j +"mainmethod");
+                  j++;
+                  try
+                  {
+                      
+                  
+                  Thread.sleep(1000,200);
+                  }
+                  catch(Exception e)
+                          {
+                            System.out.println(e);  
+                          }
+               } 
+        }
+     
+        
+        
+    }
+    
+}
