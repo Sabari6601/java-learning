@@ -1,0 +1,52 @@
+
+package atmthreading;
+class atm
+{
+ synchronized    public void checkbalance(String name)
+    {
+        System.out.println(name+" checking");
+         try{Thread.sleep(1000);}catch(Exception e){System.out.println(e);}
+          System.out.println("balance");
+    }
+ synchronized    public void withdraw(String name,int amt)
+    {
+        System.out.println(name+ " withdrawing");
+         try{Thread.sleep(1000);}catch(Exception e){System.out.println(e);}
+            System.out.println(amt);
+    }
+    
+            }
+class customer extends Thread
+{
+    atm ATM;
+    String name;
+    int amount;
+    customer(int a,atm aa,String name)
+    {
+        this.name=name;
+        this.amount=a;
+        ATM=aa;
+    }
+    public void useatm()
+    {
+        ATM.checkbalance(name);
+        ATM.withdraw(name, amount);
+    }
+    public void run()
+    {
+        useatm();
+    }
+    
+}
+public class ATMthreading {
+
+    public static void main(String[] args) {
+        atm aa=new atm();
+        
+        customer c1=new customer(200,aa,"sabari");
+       customer c2=new customer(200,aa,"kritika");
+    c1.start();
+    c2.start();
+    }
+    
+}
