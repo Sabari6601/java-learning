@@ -1,0 +1,24 @@
+
+package wrapper.pkgclass;
+
+public class WrapperClass {
+
+
+    public static void main(String[] args) {
+        int i=10;
+        Integer ii=Integer.valueOf(i);
+        Integer ik=i;
+        
+        byte b=20;
+        Byte bb=Byte.valueOf(b);
+        System.out.println(ii+" "+bb);
+        byte cc=bb; 
+        
+        float f=1.235647382901f;
+        Float fw=Float.valueOf(f);
+        Float fe=f;
+        float fp=fe;
+        
+    }
+    
+}
