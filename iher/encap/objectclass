@@ -1,0 +1,40 @@
+
+package objectclass;
+class Object
+{
+    public String toString()
+    {
+        return "hello world";
+    }
+    public int hashCode()
+    {
+        
+        return 101;
+    }
+}
+class love extends Object
+{
+    public String toString()
+    {
+        return "world hello";
+    }
+}
+public class Objectclass {
+
+ 
+    public static void main(String[] args) {
+        
+        Object o=new Object();
+     System.out.println(o.toString());   
+     System.out.println(o.hashCode()); 
+     love l=new love();
+     System.out.println(l.toString());   
+     System.out.println(l.hashCode());
+     Object m=o;
+          System.out.println(o.equals(m)); 
+
+        
+        
+    }
+    
+}
