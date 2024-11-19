@@ -1,0 +1,18 @@
+
+package wrapperclassinteger;
+
+
+public class Wrapperclassinteger {
+
+    
+    public static void main(String[] args) {
+        int a=10;
+        Integer a1=a;
+        Integer a2=Integer.valueOf(a);
+        Integer a3=Integer.valueOf("1234");
+        System.out.println(a3);
+                System.out.println(Integer.parseInt("25092004"));
+        
+    }
+    
+}
