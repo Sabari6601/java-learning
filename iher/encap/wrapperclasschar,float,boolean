@@ -1,0 +1,22 @@
+
+package wrapperclassfloat;
+
+
+public class Wrapperclassfloat {
+
+
+    public static void main(String[] args) {
+        float a=12.345f;
+        Float aa=12.345f;
+        System.out.println(aa.equals(a));
+  
+      Character c='f';
+      c= Character.toUpperCase(c);
+      System.out.println(c);
+      
+      Boolean b=true;
+     b= Boolean.valueOf(b);
+     System.out.println(b);    }
+    
+}
+
