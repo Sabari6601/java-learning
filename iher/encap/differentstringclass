@@ -1,0 +1,23 @@
+
+package stringtypes;
+
+
+public class Stringtypes {
+
+
+    public static void main(String[] args) {
+        
+        int a=128;
+       String s1="hello";
+       StringBuffer s2=new StringBuffer ("hello");
+       StringBuilder s3=new StringBuilder("hello");
+       
+      s1= s1.concat("world");
+       s2.append("world"+a);
+       s3.append(a);
+       System.out.println(s1+"   "+s2+"   "+s3);
+    
+    
+    }
+    
+}
