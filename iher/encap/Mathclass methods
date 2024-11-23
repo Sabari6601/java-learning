@@ -36,6 +36,13 @@ public class MatnClass {
          System.out.print("find the below number decrement 1: ");
      System.out.println(Math.decrementExact(12));
      
+     System.out.print("Random number: ");
+     System.out.println(Math.random()*10);
+     
+      System.out.print("next float number: ");
+     System.out.println(Math.nextAfter(12.5, 14));
+     
+     
     }
     
 }
