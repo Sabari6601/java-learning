@@ -1,0 +1,41 @@
+
+package matnclass;
+
+public class MatnClass {
+
+   
+    public static void main(String[] args) {
+     System.out.print("absolute: ");
+     System.out.println(Math.abs(-128));
+     
+        System.out.print("Strictabsolute: ");
+     System.out.println(StrictMath.abs(-128.6));
+     
+          System.out.print("cube: ");
+     System.out.println(Math.cbrt(125));
+     
+          System.out.print("ceiling: ");
+     System.out.println(StrictMath.ceil(19.05));
+     
+         System.out.print("floor: ");
+     System.out.println(Math.floor(124.1));
+     
+          System.out.print("division: ");
+     System.out.println(Math.divideExact(3500,6));
+     
+          System.out.print("addition: ");
+     System.out.println(Math.addExact(600,50));
+     
+          System.out.print("divide and give its ceiling: ");
+     System.out.println(Math.ceilDiv(100, 7));
+     
+     
+          System.out.print("divide and find the ceiling no: ");
+     System.out.println(Math.ceilDivExact(200, 7));
+     
+         System.out.print("find the below number decrement 1: ");
+     System.out.println(Math.decrementExact(12));
+     
+    }
+    
+}
