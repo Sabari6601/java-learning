@@ -1,0 +1,39 @@
+
+package pkgenum;
+enum dept
+{
+    it,civl,cs,eeee,ece
+}
+
+public class Enum {
+
+  
+    public static void main(String[] args) {
+        dept d1=dept.it;
+            dept d2=dept.civl;
+                dept d3=dept.cs;
+                    dept d4=dept.eeee;
+                        dept d5=dept.ece;
+        
+        System.out.println(d1);
+           System.out.println(d2);
+              System.out.println(d3);
+                 System.out.println(d4);
+                    System.out.println(d5);
+                    
+                       System.out.println("-------------------------------------------------");
+                       
+          dept list[]=dept.values();
+          
+          int i=1;
+          for(dept x:list)
+          {
+            
+                   System.out.println("dept"+i+" :" +x);
+                   i++;
+                     
+            
+          }
+
+    }
+    
