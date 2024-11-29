@@ -1,0 +1,40 @@
+
+package annotation;
+  class sample
+    {
+        public void meth1()
+        {
+            
+        }
+    }
+    class sample2 extends sample
+     {
+          @Override
+        public void meth1()
+        {
+            
+        }
+    }
+    class demo
+    {
+        public void method1()
+        {
+            System.out.println("hi");
+        }
+        @Deprecated
+        public void method2()
+        {
+            System.out.println("hi");
+        }
+    }
+public class Annotation {
+  
+        @SuppressWarnings("Deprecated")
+    public static void main(String[] args) {
+       demo s=new demo();
+       s.method2();
+       
+   
+    }
+    
+}
