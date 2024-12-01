@@ -1,0 +1,16 @@
+
+package lamba;
+@FunctionalInterface
+interface superr
+        {
+ void meth1();   
+}
+public class Lamba {
+
+    public static void main(String[] args) {
+        superr s=()->{System.out.println("hi");};
+        s.meth1();
+
+    }
+    
+}
