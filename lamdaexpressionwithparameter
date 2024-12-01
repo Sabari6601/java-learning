@@ -1,0 +1,39 @@
+
+package lamdaparameter;
+@FunctionalInterface
+interface sample
+{
+    public int add(int a,int b);
+}
+
+
+@FunctionalInterface
+interface sample1
+{
+    public void meth2(String str);
+}
+
+@FunctionalInterface
+interface sample2
+{
+    public void meth3(int k);
+}
+
+public class Lamdaparameter {
+
+ 
+    public static void main(String[] args) {
+        sample s=(a,b)->{System.out.println(a+b);return a+b;};
+        s.add(10,30);
+        
+        sample s1=(aa,bb)->aa+bb;
+     System.out.println(s1.add(100,200));
+        
+        sample1 ss=str->System.out.println(str);;
+        ss.meth2("sabari");
+        
+        sample2 sss=BD->System.out.println(BD);;
+        sss.meth3(25092004);
+    }
+    
+}
