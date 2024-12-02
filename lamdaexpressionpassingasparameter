@@ -1,0 +1,30 @@
+
+package lamdaasparameter;
+interface sabari
+{
+public void main();
+}
+class kri
+{
+    public void same(sabari kr)
+    {
+        kr.main();
+    }
+}
+class supe
+{
+    public void tuesday()
+    {
+    kri kk=new kri();
+    kk.same(()->{System.out.println("hi");});
+}
+}
+public class Lamdaasparameter {
+
+    public static void main(String[] args) {
+        supe sa=new supe();
+        sa.tuesday();
+  
+    }
+    
+}
