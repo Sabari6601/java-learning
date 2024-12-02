@@ -1,0 +1,29 @@
+
+package lambda.expression;
+interface test
+{
+    void meth1();
+}
+class one
+{
+    int a=10;
+    public void meth2()
+    {
+        int b=20;
+        test t=()->{
+            int c=30;System.out.println("hi");
+        System.out.println("hello:"+a+++" "+b+" "+c++);};
+        
+        t.meth1();
+    }
+}
+public class LambdaExpression {
+
+  
+    public static void main(String[] args) {
+        one o=new one();
+        o.meth2();
+ 
+    }
+    
+}
