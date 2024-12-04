@@ -1,0 +1,21 @@
+
+package lamdamethosreference;
+
+interface hi
+{
+    public void meth1(String str);
+}
+public class Lamdamethosreference {
+
+   public static void same(String str)
+   {
+       StringBuffer s=new StringBuffer(str);
+       s.reverse();
+       System.out.println(s);
+   }
+    public static void main(String[] args) {
+        hi h=Lamdamethosreference::same;
+        h.meth1("hello");
+    }
+    
+}
