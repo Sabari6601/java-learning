@@ -1,0 +1,20 @@
+
+package generictopic;
+
+
+public class Generictopic {
+
+    public static void main(String[] args) {
+    Object o=new String("hi");
+    String s=(String)o;
+    System.out.println(s);
+    
+    Object arr[]=new Object[3];
+    
+    arr[0]=new Integer(10);
+    arr[1]="hi";
+    arr[2]="hello";
+    System.out.println(arr[2]+""+arr[1]+""+arr[0]);
+    }
+    
+}
