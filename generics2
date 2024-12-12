@@ -1,0 +1,19 @@
+
+package generic2;
+
+
+public class Generic2<T>
+{
+  T data[]=(T[]) new Object[3];
+    
+    public static void main(String[] args) {
+        
+        Generic2<String> kri=new Generic2();
+        
+        kri.data[0]="hi";
+        kri.data[1]="hello";
+        kri.data[2]=10;
+        
+    }
+    
+}
