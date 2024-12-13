@@ -1,0 +1,26 @@
+
+package generics3;
+class one<T>
+{
+    private T obj;
+    
+    public void meth1(T obj)
+    {
+        this.obj=obj;
+    }
+    public T getdata()
+    {
+        return obj;
+    }
+}
+public class Generics3 {
+
+    public static void main(String[] args) {
+        one<Integer> ss= new one<>();
+        ss.meth1(10);
+        // this is not possible because the datatype is definde as integer  ss.meth1("hi");
+        System.out.println(ss.getdata());
+        
+    }
+    
+}
