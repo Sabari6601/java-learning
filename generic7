@@ -1,0 +1,41 @@
+
+package genericsubclass;
+class one<T>
+{
+    T a[]=(T[]) new Object[10];
+    int length=0;
+    
+    public void append(T v)
+    {
+    a[length++]=v;    
+    }
+    public void display()
+    {
+        for(int i=0;i<length;i++)
+        {
+            System.out.println(a[i]);
+        }
+    }
+    
+}
+class two<T> extends one<T>
+{
+    T b ;
+    
+}
+
+public class Genericsubclass {
+
+    public static void main(String[] args) {
+      
+             two<String> s=new two();
+             s.b="hooo";
+        s.append("hi");
+        s.append(10);
+        s.append("hello");
+         
+         
+        s.display();
+    }
+    
+}
