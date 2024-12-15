@@ -1,0 +1,33 @@
+
+package genericboundedtype;
+class kri<T extends Number>
+{
+    T a;
+    T b;
+    T c;
+}
+class krii<T extends Number>
+{
+    T aa;
+    T bb;
+    T cc;
+}
+
+
+public class Genericboundedtype {
+
+  
+    public static void main(String[] args) {
+        kri love =new kri<>();
+        love.a=20;
+        love.b="hi";
+        love.c=23.5;
+        
+        krii<Integer> lov =new krii<>();
+        lov.aa=10;
+        lov.bb=30;
+        lov.cc=4.5;
+       
+    }
+    
+}
