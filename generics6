@@ -1,0 +1,18 @@
+
+package generic2parameter;
+class two<T,K>
+{
+      T a[]=(T[]) new Object[5];
+       
+      K b[]=(K[]) new Object[3];
+}
+public class Generic2parameter {
+
+    public static void main(String[] args) {
+        two<String,Integer> ss=new two<>();
+        ss.a[1]="hi";
+        ss.b[1]=10;
+        
+    }
+    
+}
